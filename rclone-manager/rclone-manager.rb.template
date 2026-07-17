@@ -12,7 +12,7 @@ cask "rclone-manager" do
   name "RClone Manager"
   desc "GUI for rclone built with Angular and Tauri"
   homepage "https://github.com/Zarestia-Dev/rclone-manager"
-  depends_on macos: ">= :ventura" # macOS 13
+  depends_on macos: :ventura # macOS 13
   postflight do
     system "/usr/bin/xattr", "-rd", "com.apple.quarantine", "#{appdir}/RClone Manager.app"
   end
