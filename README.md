@@ -14,7 +14,15 @@ To add this tap to your Homebrew installation, run:
 brew tap Zarestia-Dev/zarestia
 ```
 
-### Step 2 – Install a tool
+### Step 2 - Trust the repository
+
+To trust the repository, run:
+
+```bash
+brew trust zarestia-dev/zarestia
+```
+
+### Step 3 – Install a tool
 
 You can then install any of the following available casks:
 
