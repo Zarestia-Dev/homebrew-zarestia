@@ -1,5 +1,5 @@
 # AUTO-GENERATED FILE. DO NOT EDIT!
-cask "rclone-manager" do
+cask "rclone-manager@0.3.1" do
   version "0.3.1"
   on_arm do
     url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_aarch64.dmg"
