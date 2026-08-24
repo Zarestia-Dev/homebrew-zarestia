@@ -1,10 +1,10 @@
-RClone Manager v0.3.1 Checksums
+RClone Manager v0.3.2 Checksums
 ======================================
 
 ARM64 (Apple Silicon):
-  File: RClone.Manager_0.3.1_aarch64.dmg
-  SHA256: 5fe22fcd44c2b768c2c0f6925b2448d1fcd066b614c10be6948af827682ff58a
+  File: RClone.Manager_0.3.2_aarch64.dmg
+  SHA256: e3c045c2120f9136327d784a122ee6badeb8e0cfdebfab5e1033255f469961e9
 
 Intel (x86_64):
-  File: RClone.Manager_0.3.1_x64.dmg
-  SHA256: aca6ca5fff1560bd48909bbca3389b4e88555d892cf2b0fd949eee3affeb291c
+  File: RClone.Manager_0.3.2_x64.dmg
+  SHA256: 2316ed007d0805f6e71838887292cd38ff6e4f0b002b53145260ddf76898139c
