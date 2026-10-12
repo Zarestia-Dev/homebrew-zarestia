@@ -1,22 +1,30 @@
 # AUTO-GENERATED FILE. DO NOT EDIT!
 cask "rclone-manager@0.2.7" do
   version "0.2.7"
+
   on_arm do
-    url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_aarch64.dmg"
     sha256 "73ef787d411e1bb36ed753871d4a051deaeb108752266e7b04d1644972abd10b"
+
+    url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_aarch64.dmg"
   end
   on_intel do
-    url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_x64.dmg"
     sha256 "a94625b7fad0bb6cbefd44b92cfc93cd803f17a5db93ffa70f42201406ced350"
+
+    url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_x64.dmg"
   end
+
   name "RClone Manager"
   desc "GUI for rclone built with Angular and Tauri"
   homepage "https://github.com/Zarestia-Dev/rclone-manager"
+
   depends_on macos: :ventura # macOS 13
-  postflight do
-    system "/usr/bin/xattr", "-rd", "com.apple.quarantine", "#{appdir}/RClone Manager.app"
-  end
+
   app "RClone Manager.app"
+
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-rd", "com.apple.quarantine", "{{appdir}}/RClone Manager.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/io.github.zarestia_dev.rclone-manager",
     "~/Library/Caches/io.github.zarestia_dev.rclone-manager",
