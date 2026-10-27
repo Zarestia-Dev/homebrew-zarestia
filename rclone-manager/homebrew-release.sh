@@ -5,6 +5,8 @@
 
 set -e
 
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -39,9 +41,9 @@ X64_DMG_URL="https://github.com/${AUTHOR}/${REPO}/releases/download/v${VERSION}/
 # Define local paths
 ARM64_DMG_PATH="/tmp/${ARM64_DMG_FILE}"
 X64_DMG_PATH="/tmp/${X64_DMG_FILE}"
-HOMEBREW_OUTPUT_DIR="../Casks"
+HOMEBREW_OUTPUT_DIR="${SCRIPT_DIR}/../Casks"
 HOMEBREW_CASK_FILE="${HOMEBREW_OUTPUT_DIR}/rclone-manager.rb"
-HOMEBREW_TEMPLATE_FILE="./rclone-manager.rb.template"
+HOMEBREW_TEMPLATE_FILE="${SCRIPT_DIR}/rclone-manager.rb.template"
 
 # Download DMG files
 echo -e "${GREEN}Downloading DMG files from GitHub releases (v${VERSION})...${NC}"
@@ -104,7 +106,7 @@ echo -e "${GREEN}✓ Versioned cask created: ${VERSIONED_CASK_FILE}${NC}"
 echo ""
 
 # Create a checksum info file for reference
-CHECKSUMS_FILE="./checksums.txt"
+CHECKSUMS_FILE="${SCRIPT_DIR}/checksums.txt"
 cat > "$CHECKSUMS_FILE" <<EOF
 RClone Manager v${VERSION} Checksums
 ======================================
