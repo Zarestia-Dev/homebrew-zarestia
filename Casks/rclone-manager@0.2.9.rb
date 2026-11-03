@@ -25,10 +25,24 @@ cask "rclone-manager@0.2.9" do
     run "/usr/bin/xattr", args: ["-rd", "com.apple.quarantine", "{{appdir}}/RClone Manager.app"]
   end
 
+  uninstall launchctl: "RClone Manager",
+            quit:      [
+              "com.rclone.manager",
+              "io.github.zarestia_dev.rclone-manager",
+            ]
+
   zap trash: [
+    "~/Library/Application Support/com.rclone.manager",
+    "~/Library/Application Support/CrashReporter/rclone-manager_*.plist",
     "~/Library/Application Support/io.github.zarestia_dev.rclone-manager",
+    "~/Library/Caches/com.rclone.manager",
     "~/Library/Caches/io.github.zarestia_dev.rclone-manager",
+    "~/Library/LaunchAgents/RClone Manager.plist",
+    "~/Library/Logs/com.rclone.manager",
+    "~/Library/Preferences/com.rclone.manager.plist",
     "~/Library/Preferences/io.github.zarestia_dev.rclone-manager.plist",
+    "~/Library/Saved Application State/com.rclone.manager.savedState",
     "~/Library/Saved Application State/io.github.zarestia_dev.rclone-manager.savedState",
+    "~/Library/WebKit/com.rclone.manager",
   ]
 end
