@@ -1,14 +1,14 @@
 # AUTO-GENERATED FILE. DO NOT EDIT!
 cask "rclone-manager" do
-  version "0.3.5"
+  version "0.3.6"
 
   on_arm do
-    sha256 "4a8530c4365b3a6457ed549a1ef1356f8f462ae4a2b0826c9f2fb1544a244c15"
+    sha256 "a54387f591bfb9af5b016f452e491566a162038cc08651f70b4204e120c9b036"
 
     url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_aarch64.dmg"
   end
   on_intel do
-    sha256 "4e68b1c8a26daf50c0333cbe81b6a6889ec894c4480a43a4f63f224be7435a56"
+    sha256 "24ba0938f7672482673168912cb89d1af4b0acd87cf8c49e1adae1b9564652c3"
 
     url "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v#{version}/RClone.Manager_#{version}_x64.dmg"
   end
